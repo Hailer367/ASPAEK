@@ -1,7 +1,6 @@
 {
   "name": "runeflip",
   "version": "1.0.0",
-  "description": "RuneFlip - Solana Coin Flipping Game",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,16 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^14.2.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@solana/web3.js": "^1.87.6",
-    "@solana/wallet-adapter-react": "^0.15.35"
-  },
-  "devDependencies": {
-    "@types/node": "^20.8.7",
-    "@types/react": "^18.2.31",
-    "typescript": "^5.2.2"
+    "next": "14.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "engines": {
     "node": ">=18.0.0"
