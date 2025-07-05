@@ -1,39 +1,61 @@
+'use client';
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-interface WalletContextType {
-  // Add your wallet-related state and methods here
-  connected: boolean;
-  connect: () => void;
-  disconnect: () => void;
-  // Add other wallet properties as needed
+interface GameContextType {
+  score: number;
+  level: number;
+  gameState: 'idle' | 'playing' | 'paused' | 'gameOver';
+  startGame: () => void;
+  pauseGame: () => void;
+  endGame: () => void;
+  updateScore: (points: number) => void;
 }
 
-const WalletContext = createContext<WalletContextType | undefined>(undefined);
+const GameContext = createContext<GameContextType | undefined>(undefined);
 
-export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [connected, setConnected] = useState(false);
+export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [score, setScore] = useState(0);
+  const [level, setLevel] = useState(1);
+  const [gameState, setGameState] = useState<'idle' | 'playing' | 'paused' | 'gameOver'>('idle');
 
-  const connect = () => {
-    // Add your wallet connection logic
-    setConnected(true);
+  const startGame = () => {
+    setGameState('playing');
+    setScore(0);
+    setLevel(1);
   };
 
-  const disconnect = () => {
-    // Add your wallet disconnection logic
-    setConnected(false);
+  const pauseGame = () => {
+    setGameState('paused');
+  };
+
+  const endGame = () => {
+    setGameState('gameOver');
+  };
+
+  const updateScore = (points: number) => {
+    setScore(prev => prev + points);
   };
 
   return (
-    <WalletContext.Provider value={{ connected, connect, disconnect }}>
+    <GameContext.Provider value={{ 
+      score, 
+      level, 
+      gameState, 
+      startGame, 
+      pauseGame, 
+      endGame, 
+      updateScore 
+    }}>
       {children}
-    </WalletContext.Provider>
+    </GameContext.Provider>
   );
 };
 
-export const useWallet = () => {
-  const context = useContext(WalletContext);
+export const useGame = () => {
+  const context = useContext(GameContext);
   if (context === undefined) {
-    throw new Error('useWallet must be used within a WalletProvider');
+    throw new Error('useGame must be used within a GameProvider');
   }
   return context;
 };
+
