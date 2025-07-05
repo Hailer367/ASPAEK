@@ -1,61 +1,25 @@
 {
   "name": "runeflip",
   "version": "1.0.0",
-  "description": "RuneFlip - Solana Coin Flipping Game with Rune-Engraved Coins",
+  "description": "RuneFlip - Solana Coin Flipping Game",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "type-check": "tsc --noEmit",
-    "supabase:start": "supabase start",
-    "supabase:stop": "supabase stop",
-    "supabase:reset": "supabase db reset",
-    "deploy": "vercel --prod"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "^14.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@supabase/ssr": "^0.1.0",
-    "@solana/wallet-adapter-base": "^0.9.23",
-    "@solana/wallet-adapter-react": "^0.15.35",
-    "@solana/wallet-adapter-react-ui": "^0.9.35",
-    "@solana/wallet-adapter-wallets": "^0.19.32",
     "@solana/web3.js": "^1.87.6",
-    "@supabase/supabase-js": "^2.38.4",
-    "@supabase/auth-helpers-nextjs": "^0.8.7",
-    "@supabase/auth-helpers-react": "^0.4.2",
-    "framer-motion": "^10.16.4",
-    "tailwindcss": "^3.3.5",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31",
-    "@headlessui/react": "^1.7.17",
-    "@heroicons/react": "^2.0.18",
-    "clsx": "^2.0.0",
-    "lucide-react": "^0.292.0",
-    "react-hot-toast": "^2.4.1",
-    "react-confetti": "^6.1.0",
-    "use-sound": "^4.0.1",
-    "recharts": "^2.8.0",
-    "date-fns": "^2.30.0",
-    "react-intersection-observer": "^9.5.2",
-    "workbox-webpack-plugin": "^7.0.0",
-    "next-pwa": "^5.6.0"
+    "@solana/wallet-adapter-react": "^0.15.35"
   },
   "devDependencies": {
     "@types/node": "^20.8.7",
     "@types/react": "^18.2.31",
-    "@types/react-dom": "^18.2.14",
-    "typescript": "^5.2.2",
-    "eslint": "^8.51.0",
-    "eslint-config-next": "^14.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.7.4",
-    "@typescript-eslint/parser": "^6.7.4",
-    "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.6",
-    "supabase": "^1.110.1"
+    "typescript": "^5.2.2"
   },
   "engines": {
     "node": ">=18.0.0"
