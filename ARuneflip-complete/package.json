@@ -15,9 +15,10 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
-    "next": "^14.0.0",
+    "next": "^14.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "@supabase/ssr": "^0.1.0" 
     "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/wallet-adapter-react": "^0.15.35",
     "@solana/wallet-adapter-react-ui": "^0.9.35",
