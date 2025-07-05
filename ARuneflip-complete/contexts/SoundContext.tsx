@@ -1,39 +1,52 @@
+'use client';
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-interface WalletContextType {
-  // Add your wallet-related state and methods here
-  connected: boolean;
-  connect: () => void;
-  disconnect: () => void;
-  // Add other wallet properties as needed
+interface SoundContextType {
+  isMuted: boolean;
+  volume: number;
+  toggleMute: () => void;
+  setVolume: (volume: number) => void;
+  playSound: (soundName: string) => void;
 }
 
-const WalletContext = createContext<WalletContextType | undefined>(undefined);
+const SoundContext = createContext<SoundContextType | undefined>(undefined);
 
-export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [connected, setConnected] = useState(false);
+export const SoundProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [isMuted, setIsMuted] = useState(false);
+  const [volume, setVolumeState] = useState(0.5);
 
-  const connect = () => {
-    // Add your wallet connection logic
-    setConnected(true);
+  const toggleMute = () => {
+    setIsMuted(prev => !prev);
   };
 
-  const disconnect = () => {
-    // Add your wallet disconnection logic
-    setConnected(false);
+  const setVolume = (newVolume: number) => {
+    setVolumeState(Math.max(0, Math.min(1, newVolume)));
+  };
+
+  const playSound = (soundName: string) => {
+    if (!isMuted) {
+      // Add your sound playing logic here
+      console.log(`Playing sound: ${soundName} at volume ${volume}`);
+    }
   };
 
   return (
-    <WalletContext.Provider value={{ connected, connect, disconnect }}>
+    <SoundContext.Provider value={{ 
+      isMuted, 
+      volume, 
+      toggleMute, 
+      setVolume, 
+      playSound 
+    }}>
       {children}
-    </WalletContext.Provider>
+    </SoundContext.Provider>
   );
 };
 
-export const useWallet = () => {
-  const context = useContext(WalletContext);
+export const useSound = () => {
+  const context = useContext(SoundContext);
   if (context === undefined) {
-    throw new Error('useWallet must be used within a WalletProvider');
+    throw new Error('useSound must be used within a SoundProvider');
   }
   return context;
 };
