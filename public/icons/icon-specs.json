@@ -1,0 +1,25 @@
+{
+  "icons_needed": {
+    "favicon.ico": "16x16, 32x32, 48x48 ICO format",
+    "icon-72x72.png": "72x72 PNG for mobile",
+    "icon-96x96.png": "96x96 PNG for mobile",
+    "icon-128x128.png": "128x128 PNG for desktop",
+    "icon-144x144.png": "144x144 PNG for mobile",
+    "icon-152x152.png": "152x152 PNG for iOS",
+    "icon-192x192.png": "192x192 PNG for Android",
+    "icon-384x384.png": "384x384 PNG for splash",
+    "icon-512x512.png": "512x512 PNG for high-res"
+  },
+  "design_specs": {
+    "theme": "Mystical rune coin with glowing effects",
+    "colors": [
+      "#3FE0D0",
+      "#9F6CFF",
+      "#FFD66B",
+      "#0C0D12"
+    ],
+    "style": "Gradient background with rune symbol",
+    "format": "PNG with transparency"
+  },
+  "note": "Create actual icon files using design software like Figma, Photoshop, or Canva"
+}

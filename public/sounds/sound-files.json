@@ -1,0 +1,24 @@
+{
+  "sounds": {
+    "coin-flip.mp3": "Mystical coin flipping sound with arcane whoosh",
+    "win.mp3": "Triumphant victory chime with magical resonance",
+    "lose.mp3": "Somber defeat tone with fading mystical energy",
+    "click.mp3": "Crisp UI click with subtle magical ping",
+    "notification.mp3": "Gentle notification bell with ethereal echo",
+    "arcane-whoosh.mp3": "Deep mystical wind sound for dramatic moments",
+    "metallic-ping.mp3": "Sharp metallic coin sound for interactions",
+    "mystical-chime.mp3": "Enchanted bell sound for game completion"
+  },
+  "note": "Replace these JSON placeholders with actual MP3 files",
+  "recommended_sources": [
+    "freesound.org",
+    "zapsplat.com",
+    "adobe_audition_presets"
+  ],
+  "specifications": {
+    "format": "MP3",
+    "bitrate": "128kbps",
+    "sample_rate": "44.1kHz",
+    "duration": "1-3 seconds each"
+  }
+}
