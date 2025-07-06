@@ -10,7 +10,7 @@ import { GameHistory } from './GameHistory';
 import { ActiveMatches } from './ActiveMatches';
 import { UserStats } from './UserStats';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { formatSol } from '@/utils';
+import { formatSol } from '../../utils';
 import toast from 'react-hot-toast';
 
 export const GameInterface: React.FC = () => {
